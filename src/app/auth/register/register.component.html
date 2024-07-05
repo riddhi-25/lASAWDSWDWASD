@@ -1,0 +1,35 @@
+<form class="container" [formGroup]="registerForm" (ngSubmit)="onsignup()">
+    Register here!
+    
+<div>
+    <input type="text" placeholder="name" formControlName="name">
+    <div style="color: red" *ngIf="registerForm.controls['name'].invalid &&  registerForm.controls['name'].touched">
+  
+        <p *ngIf="registerForm.controls['name'].errors?.['required']">name is required.</p>
+         </div>
+</div>
+<div>
+    <input type="email" placeholder="email" formControlName="email" />
+    <div style="color: red" *ngIf="registerForm.controls['email'].invalid &&  registerForm.controls['email'].touched">
+  
+      <p *ngIf="registerForm.controls['email'].errors?.['required']">Email is required.</p>
+      <p *ngIf="registerForm.controls['email'].errors?.['email']">Please enter a valid email.</p>
+    </div>
+</div>
+<div>
+    <input type="password" placeholder="password" formControlName="password">
+    <div
+    style="color: red"
+    *ngIf="
+    registerForm.controls['password']?.invalid &&
+    registerForm.controls['password']?.touched
+    "
+  >
+    <p *ngIf="registerForm.controls['password'].errors?.['required']">
+      Password is required.
+    </p>
+  </div>
+</div>
+
+<button>SignUp</button>
+</form>

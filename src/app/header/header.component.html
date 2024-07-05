@@ -1,0 +1,11 @@
+<div class="nav-bar">
+    <div class="nav-left">
+      <a href="/header" class="nav-link">Posts</a>
+      <a href="header/user" class="nav-link">User</a>
+    </div>
+    <div class="nav-right">
+        <p  class="nav-link">Hi {{userData.name}}</p>
+      <a (click)="onLogout()">Logout</a>
+    </div>
+  </div>
+<router-outlet></router-outlet>

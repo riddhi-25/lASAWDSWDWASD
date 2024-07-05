@@ -1,0 +1,37 @@
+<p routerLink="/header/user/addUser">add user</p>
+<table class="user">
+  <thead>
+    <tr>
+      <th>UserId</th>
+      <th>name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData">
+<th>{{user.id}}</th>
+<th>{{user.name}}</th>
+<th>{{user.email}}</th> 
+<th><img [src]="user.avatar"></th> 
+<th><button (click)="viewForm(user.id)">Edit</button></th>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="showForm" id="overlay">
+    <form  #userForm="ngForm">
+      <div >
+        <div >
+          <div class="input-box">
+            <label>Name</label>
+            <input type="text" required name="name" ngModel/>
+          </div>
+          <div class="input-box">
+            <label>Details</label>
+            <textarea rows="8" name="email" required ngModel></textarea>
+          </div>
+          </div>
+          </div>
+          <button (click)="editUser(userId,userForm)">submit</button>
+    </form>
+  </div>

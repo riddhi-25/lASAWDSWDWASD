@@ -1,0 +1,46 @@
+<h4>Post {{ productData.id }}</h4>
+<table style="margin: auto;">
+<thead>
+  <tr>
+    <th>title</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>category</th>
+    <th>image</th>
+    <th>form action</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr >
+      <th>{{ productData.title }}</th>
+      <th>{{ productData.price}}</th>
+      <th>{{ productData.description}}</th>
+      <th>{{ productData.category.id}}</th>
+      <th><img [src]="productData.images[0]"></th>
+      <th><button (click)="editProduct(productData.id)">edit</button></th>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+<form *ngIf="showForm" #editForm="ngForm">
+  <div >
+    <div >
+      <div class="input-box">
+        <label>Title</label>
+        <input type="text" required name="title"  [(ngModel)]="editedProductData.title"/>
+      </div>
+      <div class="input-box">
+        <label>Price</label>
+        <input type="number" required name="price"  [(ngModel)]="editedProductData.price"/>
+      </div>
+      <div class="input-box">
+        <label>Description</label>
+        <textarea rows="8" name="desc" required [(ngModel)]="editedProductData.description"></textarea>
+      </div>
+      </div>
+      </div>
+      <button (click)="editFormSubmit(editForm)">submit</button>
+</form>

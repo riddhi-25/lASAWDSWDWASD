@@ -1,0 +1,21 @@
+<form [formGroup]="addPost" (ngSubmit)="onSubmit()">
+  <label for="">Title</label>
+  <br>
+  <input type="text" formControlName="title">
+  
+  
+  <br>
+  price
+  <input type="number" formControlName="price"><br>
+  description
+  <textarea name="message" formControlName="description">
+
+  </textarea>
+  <br>
+category:
+<input type="number" formControlName="categoryId"><br>
+images
+<input type="text" formControlName="images"> 
+<br>
+  <button>Create Product</button>
+</form>

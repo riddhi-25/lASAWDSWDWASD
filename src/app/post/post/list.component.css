@@ -1,0 +1,26 @@
+.container{
+  padding: 20px;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+.post-list {
+  
+  border: solid 1px #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.text-center{
+  text-align: center;
+}
+button{
+  margin-left: 40px;
+}

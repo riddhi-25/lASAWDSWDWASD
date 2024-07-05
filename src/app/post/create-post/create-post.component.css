@@ -1,0 +1,31 @@
+form{
+    width: 80%;
+    background-color: #e2e1de;
+    margin: auto;
+    padding: 10px;
+    
+}
+label{
+    margin: 10px;
+}
+input{
+    margin: 10px;
+}
+textarea {
+    margin: 10px;
+    width: 50%;
+    padding: 12px;
+    border: 1px solid ;
+    
+  }
+
+  button{
+    margin: 10px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+  }
