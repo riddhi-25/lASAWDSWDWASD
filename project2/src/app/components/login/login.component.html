@@ -1,0 +1,16 @@
+<div>
+  <h1>Login</h1>
+  <h4>email</h4>
+
+  <input type="text" placeholder="Enter email" required [(ngModel)]="email" />
+  <p style="color: red" *ngIf="status">email or password is incorrect</p>
+  <h4>password</h4>
+  <input
+    type="password"
+    placeholder="Enter password"
+    required
+    [(ngModel)]="password"
+  />
+  <button type="submit" (click)="OnLoginClicked()">Login</button>
+  <p>New user? <a routerLink="/signup">SignUp</a></p>
+</div>

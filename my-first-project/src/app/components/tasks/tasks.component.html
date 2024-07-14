@@ -1,0 +1,25 @@
+<p>tasks works!</p>
+
+<!-- binding to id propert-property binding -->
+<input type="text" [id]="myId">
+<button [disabled]="isDisabled" >submit</button>
+
+<!-- class binding -->
+<h2 [class]="sClass" >welcome</h2>
+<h2 [class.text-danger]="hasError" >Hiiiii</h2>
+<h2 [ngClass]="messageClasses" >yo</h2>
+
+<!-- style binding -->
+ <h2 [style.color]="'orange'" >style binding</h2>
+ <h2 [style.color]="hasError? 'red' : 'green' " >style binding2</h2>
+ <h2 [style]="titleStyle">style binding3</h2>
+
+ <!-- event binding -->
+  <button (click)="onClick($event)" >Greet</button>
+  {{message}}
+ <br>
+  <input #myInput type="text">
+  <button (click)="logMessage(myInput.value)">submit</button>
+  <br>
+  <input [(ngModel)]="name" type="text"> 
+  {{name}}

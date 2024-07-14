@@ -1,0 +1,21 @@
+.strike-through {
+    text-decoration: line-through;
+  }
+
+  button{
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+
+  div{
+    display: flex; 
+    align-items: center;
+    background-color: aliceblue;
+    padding: 5px; 
+    margin:10px auto;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+max-width: 500px;
+  }
+ 

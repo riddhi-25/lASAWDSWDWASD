@@ -1,0 +1,14 @@
+
+  <div>
+    <input type="text" (input)="onInputChange($event)" />
+
+    <button (click)="getFunc()">search</button>
+  </div>
+
+    <div
+      *ngFor="let item of jokeList"
+      >{{ item.joke }}
+
+    
+  </div>
+

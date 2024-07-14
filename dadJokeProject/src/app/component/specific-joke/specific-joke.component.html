@@ -1,0 +1,11 @@
+<header style="display: flex; justify-content: space-between;
+align-items: center;
+">
+Random dad joke:
+<button (click)="getJoke()" >New joke</button>
+</header>
+ 
+   <div *ngFor="let joke of  jokes">
+     {{joke.joke}}   
+  </div>
+

@@ -1,0 +1,36 @@
+<h4>Date Pipe</h4>
+<p>{{ todayDate | date }}</p>
+<p>{{ todayDate | date : "long" }}</p>
+<p>{{ todayDate | date : "shortTime" }}</p>
+
+<hr />
+
+<h4>Currency Pipe</h4>
+<p>{{ a | currency }}</p>
+{{ a | currency : "CAD" : "code" }}
+
+<hr />
+
+<h4>Decimal Pipe</h4>
+<p>{{ 4 | number : "1.2-2" }}</p>
+<p>{{ b | number : "1.0-3" }}</p>
+<p>{{ b | number : "1.0-2" }}</p>
+<p>{{ b | number : "1.0-1" }}</p>
+
+<hr />
+
+<h4>Initials Pipe</h4>
+<input type="text" [(ngModel)]="firstName" placeholder="firstName" />
+<button (click)="showInitials()">Show Initials</button>
+<p *ngIf="showInitialsFlag">
+  {{ firstName | initials }}
+</p>
+
+<hr />
+<h4>Highlight Pipe</h4>
+<input type="text" [(ngModel)]="inputText" />
+
+<p [innerHTML]="text | highlight:inputText"></p>
+
+
+

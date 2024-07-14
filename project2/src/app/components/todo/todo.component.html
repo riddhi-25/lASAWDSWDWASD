@@ -1,0 +1,22 @@
+<div class="container">
+<input placeholder="input" [(ngModel)]="inputText" type="text" (input)="textInput($event)" />
+
+<select style="margin-left: 5px;"
+ #userIdSelect (change)="onSelectedNumber(userIdSelect.value)">
+  <option *ngFor="let userId of distinctUserIds" [value]="userId">
+    {{ userId }}
+  </option>
+</select>
+
+<a style="margin-left: 5px;" routerLink="/Welcome"
+[queryParams]="{logout:true}">Welcome</a>
+<a routerLink="/">logout</a>
+</div>
+
+<div *ngFor="let post of  filteredPosts">
+  <app-user
+    [myTitle]="post.title"
+    [status]="post.completed"
+[myInput]="inputText"
+  ></app-user>
+</div>

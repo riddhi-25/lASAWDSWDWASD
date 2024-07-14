@@ -1,0 +1,28 @@
+form {
+
+    background-color: aliceblue;
+    padding: 5px; 
+    margin:10px auto;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+max-width: 500px;
+  }
+input{
+
+padding: 12px 20px;
+margin: 8px 0;
+display: block;
+border: 1px solid #ccc;
+box-sizing: border-box;  
+}
+button {
+background-color: #553caf;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+border-radius: 10px;
+}

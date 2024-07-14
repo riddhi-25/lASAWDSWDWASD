@@ -1,0 +1,29 @@
+<form [formGroup]="reactiveForm">
+  Signup
+
+  <input type="email" placeholder="email" formControlName="email" />
+  <div style="color: red" *ngIf="reactiveForm.controls['email'].invalid && (reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched)">
+
+    <p *ngIf="reactiveForm.controls['email'].errors?.['required']">Email is required.</p>
+    <p *ngIf="reactiveForm.controls['email'].errors?.['email']">Please enter a valid email.</p>
+  </div>
+
+  <input type="password" placeholder="password" formControlName="password" />
+  <div style="color: red" *ngIf="reactiveForm.controls['password']?.invalid && (reactiveForm.controls['password']?.dirty || reactiveForm.controls['password']?.touched)">
+    <p *ngIf="reactiveForm.controls['password'].errors?.['required']">Password is required.</p>
+    <p *ngIf="reactiveForm.controls['password'].errors?.['minlength']">Password must be at least 8 characters!</p>
+    <p *ngIf="reactiveForm.controls['password'].errors?.['maxlength']">Password must be at most 16 characters!</p>
+    <p *ngIf="reactiveForm.controls['password'].errors?.['hasNumber']">Password must contain at least 1 number!</p>
+    <p *ngIf="reactiveForm.controls['password'].errors?.['hasUpperCase']">Password must contain at least 1 in Upper Case!</p>
+    <p *ngIf="reactiveForm.controls['password'].errors?.['hasLowerCase']">Password must contain at least 1 Letter in Lower Case!</p>
+   
+</div>
+  <input
+    type="password"
+    placeholder="Confirm password"
+    formControlName="confirmPassword"
+  />
+  <div style="color: red" *ngIf="reactiveForm?.errors?.['mismatch'] && reactiveForm.touched">Passwords must match</div>
+
+  <button (click)="OnSubmitClicked()">Signup</button>
+</form>

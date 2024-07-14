@@ -1,0 +1,30 @@
+.nav-bar {
+    background-color: #2f0283; /* black background */
+    color: #fff; /* white text */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-link:hover {
+    background-color: #333; /* dark gray background on hover */
+    color: #fff;
+    text-decoration: underline;
+  }

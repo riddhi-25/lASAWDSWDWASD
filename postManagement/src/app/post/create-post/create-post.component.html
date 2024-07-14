@@ -1,0 +1,25 @@
+<form [formGroup]="addPost" >
+  Title
+
+  <input type="text" formControlName="title" required/>
+
+  <br />
+  price
+  <input type="number" formControlName="price" required /><br />
+  description
+  <textarea name="message" formControlName="description" required> </textarea>
+  <br />
+  category
+  <select name="" id="" formControlName="categoryId">
+    <option [value]="category.id" *ngFor="let category of categoryList"> {{category.name}} </option>
+    </select>
+  
+  images
+  <div formArrayName="images" *ngFor="let image of imageControls; let i=index ">
+    <input type="text" [formControlName]="i"/>
+    
+  </div>
+  <button (click)="addImage()">add img</button>
+  <br />
+  <button (click)="onSubmit()">Create Product</button>
+</form>

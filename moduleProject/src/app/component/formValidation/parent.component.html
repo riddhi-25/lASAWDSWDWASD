@@ -1,0 +1,8 @@
+<form [formGroup]="parentForm"> 
+  <input type="text" placeholder="input1" formControlName="mainInput1"> 
+  <input type="text" placeholder="input2" formControlName="mainInput2"> 
+</form >
+
+  <app-child></app-child>
+
+  <button [disabled]="isDisabled">submit</button>

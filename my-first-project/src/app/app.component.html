@@ -1,0 +1,40 @@
+<div class="container">
+    <app-header></app-header>
+    <app-tasks></app-tasks>
+</div>
+
+<div class="container">
+    <app-assignment></app-assignment>
+    <hr>
+<!-- 
+    <button (click)="increment()" >increment</button>
+    <button (click)="decrement()" >decrement</button>
+    <app-child *ngIf="isVisible"
+    [myCounter]="counter">
+        <h2 >hello world</h2>
+    </app-child>
+   <button (click)="setVisibility()">show/hide</button> -->
+</div>
+
+
+<div class="container">
+    <h2>Input/Output assignment</h2>
+    please enter a number:
+    <input [(ngModel)]="inputNum" type="text" >
+<br>
+{{finalNum}}
+    <app-assignment2 [myNumber]="inputNum"
+    (newItemEvent)="updateInputNum($event)">
+
+    </app-assignment2>
+  
+
+    
+    <br><br><br>
+    <button appLongPress (longPress)="handleLongPress()">Long press!</button>
+<br>
+<br>
+
+<input trapFocus type="text" name="" id="">
+<input trapFocus type="text">
+</div>

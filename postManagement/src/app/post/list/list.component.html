@@ -1,0 +1,13 @@
+<h1 class="text-center">Product List</h1>
+<button><a routerLink="/header/add">Add product</a></button>
+<div class="container">
+  <div *ngFor="let post of productData" class="post-list"
+  routerLink="/header/details/{{ post.id }}">
+  <p class="id">{{post.id}}</p>
+    <p >{{ post.title }}</p>
+      <p>{{ post.price}}</p>
+      <p>{{ post.category.id}}</p>
+      <!-- <p><img [src]="post.images[0]"></p> -->
+      <p><img [src]="getSanitizedImageUrl(post.images[0])"></p>
+  </div>
+</div>

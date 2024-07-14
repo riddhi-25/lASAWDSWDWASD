@@ -1,0 +1,4 @@
+.trap-focus-highlight {
+  outline: 2px solid #0099ff; /* blue outline */
+  box-shadow: 0 0 5px #0099ff; /* blue box shadow */
+}

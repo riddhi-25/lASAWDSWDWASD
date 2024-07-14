@@ -1,0 +1,64 @@
+img{
+  height: 100px;
+  width: 100px;
+}
+
+table{
+  margin: auto;
+  width: 90%;
+}
+
+td,  th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+thead {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #6d6a91;
+  color: white;
+}
+
+form {
+  margin: auto;
+  margin-top: 10px;
+width: 90%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  align-items:center ;
+}
+
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-box input, .input-box textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-box textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+
+button[type="submit"] {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

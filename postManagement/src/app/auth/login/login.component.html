@@ -1,0 +1,36 @@
+<form [formGroup]="loginForm" class="container">
+  Login
+  <div>
+    <input type="email" placeholder="email" formControlName="email" />
+    <div
+      style="color: red"
+      *ngIf="
+        loginForm.controls['email'].invalid &&
+        loginForm.controls['email'].touched
+      "
+    >
+      <p *ngIf="loginForm.controls['email'].errors?.['required']">
+        Email is required.
+      </p>
+      <p *ngIf="loginForm.controls['email'].errors?.['email']">
+        Please enter a valid email.
+      </p>
+    </div>
+  </div>
+  <div>
+    <input type="password" placeholder="password" formControlName="password" />
+    <div
+      style="color: red"
+      *ngIf="
+        loginForm.controls['password']?.invalid &&
+        loginForm.controls['password']?.touched
+      "
+    >
+      <p *ngIf="loginForm.controls['password'].errors?.['required']">
+        Password is required.
+      </p>
+    </div>
+  </div>
+  <button (click)="OnSubmitClicked()">Login</button>
+  <p>New user? <a href="login/register">Register here!</a> </p>
+</form>

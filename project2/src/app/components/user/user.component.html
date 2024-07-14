@@ -1,0 +1,8 @@
+<div>
+  <h4 [ngClass]="{ 'strike-through': status }"
+  [innerHTML]="highlightedTitle">
+</h4>
+
+  <button (click)="statusCheck()"
+  *ngIf="!status">completed</button>
+</div>

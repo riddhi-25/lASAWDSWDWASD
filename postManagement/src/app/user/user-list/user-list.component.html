@@ -1,0 +1,23 @@
+<button><a routerLink="/header/user/addUser">Add user</a></button>
+<table class="user">
+  <thead>
+    <tr>
+      <th>UserId</th>
+      <th>name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData">
+<th>{{user.id}}</th>
+<th>{{user.name}}</th>
+<th>{{user.email}}</th> 
+<th><img [src]="user.avatar"></th> 
+<th><button  routerLink="/header/user/editUser/{{ user.id }}">Edit</button></th>
+    </tr>
+  </tbody>
+</table>
+
+
+
+

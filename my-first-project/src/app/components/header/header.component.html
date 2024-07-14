@@ -1,0 +1,13 @@
+<header>
+  <h1>{{ title }}</h1>
+  <p>
+    {{ 2 + 2 }}
+    <br />
+    {{ "welcome " + name }}
+  </p>
+
+  <app-button color="green" text="add" (btnClick)="toggleAddTask()">
+  </app-button>
+  
+  <app-button [color]="c1" [text]="cName"> </app-button>
+</header>
