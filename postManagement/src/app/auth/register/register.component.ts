@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -8,8 +9,9 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
-registerForm!:FormGroup
+export class RegisterComponent implements OnInit, OnDestroy {
+registerForm!:FormGroup;
+subscription!: Subscription;
 constructor(private auth:AuthService, private router:Router){}
 
 ngOnInit(): void {
@@ -27,7 +29,7 @@ onsignup(){
    const email = this.registerForm.get('email')?.value;
    const password = this.registerForm.get('password')?.value;
    const details = this.registerForm.get('details')?.value;
-   this.auth.register(name,email, password,details).subscribe((response: any) => {
+   this.subscription = this.auth.register(name,email, password,details).subscribe((response: any) => {
      if (response) {
       console.log(response)
        console.log('User registered successfully!');
@@ -40,5 +42,10 @@ onsignup(){
  else {
    console.error('Form is invalid');
  }
+}
+ngOnDestroy(): void {
+  if (this.subscription) {
+    this.subscription.unsubscribe();
+  }
 }
 }
